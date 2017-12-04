@@ -85,8 +85,7 @@ class InfluxDbSink(val property: Properties, val registry: MetricRegistry,
       .filter(name => name != null)
       .find(name => name.startsWith("app") && name.contains("."))
       .map(name => name.substring(0, name.indexOf('.')))
-    //conf.getOption("spark.app.id").orElse(appFromRegistry).getOrElse(Utils.getProcessName())
-    conf.getOption("spark.app.id").orElse(appFromRegistry).getOrElse("")
+    conf.getOption("spark.app.id").orElse(appFromRegistry).getOrElse(Utils.getProcessName())
   }
 
   val defaultTags = Seq(
