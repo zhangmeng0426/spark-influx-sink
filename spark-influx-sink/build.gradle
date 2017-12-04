@@ -19,7 +19,7 @@ dependencies {
     compile "org.scala-lang:scala-library:${scalaVersion}"
     compile "io.dropwizard.metrics:metrics-core:${dwMetricsVersion}"
     compile "com.izettle:dropwizard-metrics-influxdb:${influxSinkVersion}"
-    compileOnly "org.apache.spark:spark-core_2.11:${sparkVersion}"
+    compileOnly "org.apache.spark:spark-core_2.10:${sparkVersion}"
     compileOnly "org.apache.httpcomponents:httpclient:${httpClientsVersion}"
 }
 
